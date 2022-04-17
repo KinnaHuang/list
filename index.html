@@ -22,11 +22,11 @@
                 <div class="item_detail">
                     <input v-model="newAddText">
                 </div>
-                <div class="price">
-                    <input v-model="newAddText2">
+                <div class="price">                   
+                    <input v-model="newAddText2" type='text' onkeyup="value=value.replace(/^(0+)|[^\d]+/g,'')">
                 </div>
                 <div class="count">
-                    <input v-model="newAddText3">
+                    <input v-model="newAddText3" type='text' onkeyup="value=value.replace(/^(0+)|[^\d]+/g,'')">
                 </div>
                 <div class="operate1">
                     <button @click="addNewList">新增</button>
