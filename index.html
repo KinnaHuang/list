@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>購物清單頁面</title>
+    <script src="https://cdn.bootcss.com/vue/2.2.2/vue.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="app">
+        <div class="container">
+            <div class="item_header">               
+                <div class="item_detail">名稱</div>
+                <div class="price">單價</div>
+                <div class="count">數量</div>
+                <div class="operate">操作</div>
+            </div>
+            <div class="item_header item_body">
+                <h3>新增單筆:</h3>
+                <div class="item_detail">
+                    <input v-model="newAddText">
+                </div>
+                <div class="price">
+                    <input v-model="newAddText2">
+                </div>
+                <div class="count">
+                    <input v-model="newAddText3">
+                </div>
+                <div class="operate1">
+                    <button @click="addNewList">新增</button>
+                </div>
+            </div>
+            <div v-for="(item, index) in itemList" :key="itemList.id" >
+                <div class="item_header item_list">
+                    <h3>購物清單:</h3>
+                    <div class="item_detail">{{item.itemName}}</div>
+                    <div class="price">{{item.price}}</div>
+                    <div class="count">{{item.count}}</div>
+                    <div class="operate1">
+                        <button v-on:click='itemList.splice(index, 1)'>刪除</button>
+                    </div>
+                </div>
+                <div class="item_header item_amount">
+                    <h3>小計:</h3>
+                    <div class="amout">{{item.price * item.count}}</div>
+                </div>
+            </div>
+            <!-- <li v-for='(list,index) in lists' v-bind:key='list.id'></li>
+            <div class="item_header item_tatal">
+                <h3>總共:</h3>
+                <div class="total">{{item.price * item.count}}</div>
+            </div> -->
+        </div>
+    </div>
+    <script src="main.js"></script>
+</body>
+</html>

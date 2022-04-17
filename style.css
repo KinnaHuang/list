@@ -1,0 +1,44 @@
+body{
+    background-color: #eee;
+}
+.item_header{
+    display: flex;
+    width: 700px;
+    margin: 0 auto;
+    height: 30px;
+    background-color: #fff;
+    border-radius: 3px;
+    padding-left: 10px;
+    text-align: right;
+}
+.item_header div{
+    width: 150px;
+    color: #888;
+    line-height: 30px;
+}
+.item_body{
+    margin-top: 5px;
+    height: 100px;
+    align-items: center;
+}
+.item_body input{
+    width: 100px;
+    height: 20px;
+}
+.item_list{
+    margin-top: 5px;
+    height: 100px;
+    align-items: center;
+}
+.item_amount{
+    height: 100px;
+    align-items: center;
+    text-align: right;
+}
+button{
+    width: 80px;
+    height: 30px;
+}
+.operate1{
+    text-align: center;
+}
